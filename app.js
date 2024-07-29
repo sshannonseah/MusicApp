@@ -9,7 +9,11 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'c237_musicapp'
+    database: 'c237_musicapp' ,
+    host: 'pro.freedb.tech',
+    user: 'qwerty',
+    password:'NSb@v5v4BN%7N4n',
+    database:'freedb_music_app'
 });
 
 connection.connect((err) => {
