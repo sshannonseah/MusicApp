@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Playlist</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f8f9fa;
+            color: #6ea4db;
+            background-image: url('/images/walpaper.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .playlist-container {
+            margin-top: 50px;
+            text-align: center;
+            display: none;
+        }
+
+        .playlist-item {
+            margin-bottom: 30px;
+        }
+
+        .audio-player {
+            width: 100%;
+            margin-top: px;
+        }
+
+        .btn {
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        button:hover,
+        .btn:hover {
+            background-color: #2980b9;
+            /* Darker shade on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+        <br>
+        <!-- Playlists Button Section -->
+        <div class="text-center mb-4">
+            <h2>Your Playlists</h2>
+        </div>
+
+        <div class="container content">
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <div class="btn btn-primary btn-block" onclick="togglePlaylist('playlist-thai')">Playlist 1:
+                        Thai</div>
+                    <div id="playlist-thai" class="playlist-container">
+                        <div class="text-center mb-4">
+                            <h2>Your Playlist: Thai</h2>
+                        </div>
+                        <div class="playlist-item">
+                            <h5>1. สวยงามเสมอ (Ever-Forever) - Billkin</h5>
+                            <iframe style="border-radius:12px; width: 100%"
+                                src="https://open.spotify.com/embed/track/5Bs2KbKUeNHM25x8t1DBTF?utm_source=generator"
+                                width="100%" height="352" frameborder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="playlist-item">
+                            <h5>2. Mr. Everything - Billkin</h5>
+                            <iframe style="border-radius:12px; width: 100%"
+                                src="https://open.spotify.com/embed/track/4CHnBhfsGuReet1IMOrueC?utm_source=generator&theme=0"
+                                width="100%" height="352" frameborder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="playlist-item">
+                            <h5>3. Re-Move On (ลบยัง) - GEMINI, FOURTH</h5>
+                            <iframe style="border-radius:12px; width: 100%"
+                                src="https://open.spotify.com/embed/track/7GduvXiDhWS3G13g55SjKB?utm_source=generator"
+                                width="100%" height="352" frameborder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="playlist-item">
+                            <h5>4. ซ่อน(ไม่)หา - Jeff Satur</h5>
+                            <iframe style="border-radius:12px; width: 100%"
+                                src="https://open.spotify.com/embed/track/759xYXTgNDGU6i6FH4kruy?utm_source=generator"
+                                width="100%" height="352" frameborder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="playlist-item">
+                            <h5>5. เทคคะแนน (CANDIDATE) - FOURTH</h5>
+                            <iframe style="border-radius:12px; width: 100%"
+                                src="https://open.spotify.com/embed/track/4UgAVgYNBahclsbXTbP3Xn?utm_source=generator"
+                                width="100%" height="352" frameborder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                        <div class="playlist-item">
+                            <h5>5. ดาวหางฮัลเลย์ - fellow fellow</h5>
+                            <iframe style="border-radius:12px; width: 100%"
+                                src="https://open.spotify.com/embed/track/56wDFSIa9Tr7zbEXUVMwjP?utm_source=generator"
+                                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 ">
+                <div class="btn btn-primary btn-block" onclick="togglePlaylist('playlist-2')">Playlist 2：KPOP</div>
+                <div id="playlist-2" class="playlist-container">
+                    <div class="text-center mb-4">
+                        <h2>Your Playlist: KPOP</h2>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>1. Been Through - EXO</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/5pesNiBKAx8JNwK2mQ2HEc?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>2.That's Okay - D.O.</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/2Ghu1DdMwxS3VAyB7i38Wo?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>3. Sing For You - EXO</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/7htOPFqaCfI6j5ssnz2cla?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>4. Puzzle Piece - NCT DREAM</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/4hMYovC1APX8ojuANCoeuF?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>5. My Youth - NCT DREAM</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/3vG5ilGpaYA2MhVtyTORF1?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <div class="btn btn-primary btn-block" onclick="togglePlaylist('playlist-3')">Playlist 3：Chinese
+                </div>
+                <div id="playlist-3" class="playlist-container">
+                    <div class="text-center mb-4">
+                        <h2>Your Playlist: Chinese</h2>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>1. 字字句句</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/7fAdinC2UTc0Y9GiKrkTtu?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>2.我会等</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/5Rzpn60KTM11EBETHaF9Kt?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>3.在加纳共和国离婚</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/6GyUt7yJ0sOktc5HjvVnFh?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>4.哪里都是你</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/3QP3cYE3qnplFueLKNVsbM?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>5.如果爱忘了</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/5klrVTKUgkEf7UWr4my5Mr?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>6.水星记</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/3CDcr9ogSecLIwourcz760?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>7.友谊长存</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/3Z9RDHetSqrfqCl31fcSN2?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <div class="btn btn-primary btn-block" onclick="togglePlaylist('playlist-4')">Playlist 4: English</div>
+                <div id="playlist-4" class="playlist-container">
+                    <div class="text-center mb-4">
+                        <h2>Your Playlist: English</h2>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>1. better for you</h5>
+                        <iframe style="border-radius:12px; width: 100%"
+                            src="https://open.spotify.com/embed/track/2fxoRz7eUFbo5RoHSvXqQh?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>2. obsessed</h5>
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/4eJHrA5Ujucbjs7ieKYOUQ?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>3. Be Alright</h5>
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/5qrSlOut2rNAWv3ubArkNy?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>4. Bruises</h5>
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/4Of7rzpRpV1mWRbhp5rAqG?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>5. Snooze</h5>
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/4iZ4pt7kvcaH6Yo8UoZ4s2?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                    <div class="playlist-item">
+                        <h5>6. Falling Like The Stars</h5>
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/track/395KzBy0bkb57dEvg6cfzJ?utm_source=generator"
+                            width="100%" height="352" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+
+
+                    <script>
+                        function togglePlaylist(id) {
+                            const playlist = document.getElementById(id);
+                            if (playlist.style.display === "none" || playlist.style.display === "") {
+                                playlist.style.display = "block";
+                            } else {
+                                playlist.style.display = "none";
+                            }
+                        }
+
+                        const players = document.querySelectorAll('.audio-player');
+                        let currentPlayer = null;
+
+                        players.forEach(player => {
+                            player.addEventListener('play', function () {
+                                if (currentPlayer && currentPlayer !== this) {
+                                    currentPlayer.contentWindow.postMessage('{"method":"pause"}', '*');
+                                }
+                                currentPlayer = this;
+                            });
+                        });
+                    </script>
+</body>
+
+</html>

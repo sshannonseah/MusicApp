@@ -1,0 +1,91 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f8f9fa;
+    color: #6ea4db;
+    background-image: url('/images/walpaper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #222742;
+    font-weight: bold;
+}
+
+h4 {
+    margin-bottom: 20px;
+    color: #222742;
+    font-weight: bold;
+}
+
+.card-title a {
+    color: #000000;
+}
+
+.navbar {
+    background-color: #666b8a;
+    color: #fff;
+}
+.navbar-link:hover {
+    color: #fff !important;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px 0 rgba(17, 13, 13, 0.565);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #ff5733;
+}
+
+.card-link:hover {
+    color: #e94b3c;
+}
+
+.mySlides {display:none;
+}
+
+
+/* Optional: Hover effect */
+.playlist-button:hover {
+    background-color: #6b8fa6; /* Darker shade for hover */
+    border-color: #6b8fa6; /* Darker shade for hover */
+}
+.playlist-container {
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+.playlist-item {
+    margin-bottom: 20px;
+}
+
+
+.playlist-item iframe {
+    width: 100%; /* Ensure iframe fills its container */
+    height: 152px; /* Set a default height for the iframe */
+    border-radius: 12px; /* Optional: Rounded corners */
+}
